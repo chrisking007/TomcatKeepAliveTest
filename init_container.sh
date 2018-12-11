@@ -170,9 +170,9 @@ fi
 
 # Adding custom commands
 
-echo "net.ipv4.tcp_keepalive_intvl = 60" >> /etc/sysctl.d/00-alphine.conf
-echo "net.ipv4.tcp_keepalive_probes = 10" >> /etc/sysctl.d/00-alphine.conf
-echo "net.ipv4.tcp_keepalive_time = 60" >> /etc/sysctl.d/00-alphine.conf
+#echo "net.ipv4.tcp_keepalive_intvl = 60" >> /etc/sysctl.d/00-alphine.conf
+#echo "net.ipv4.tcp_keepalive_probes = 10" >> /etc/sysctl.d/00-alphine.conf
+#echo "net.ipv4.tcp_keepalive_time = 60" >> /etc/sysctl.d/00-alphine.conf
 
 
 # Start Tomcat

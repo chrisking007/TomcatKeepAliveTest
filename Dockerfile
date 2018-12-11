@@ -36,9 +36,9 @@ RUN apk add --update openssh-server bash openrc \
         && wget -O /usr/local/app_insights/aiagent/applicationinsights-agent-$AI_VERSION.jar https://github.com/Microsoft/ApplicationInsights-Java/releases/download/$AI_VERSION/applicationinsights-agent-$AI_VERSION.jar --no-verbose \
         && chmod 755 /bin/init_container.sh 
 
-RUN echo "net.ipv4.tcp_keepalive_intvl = 60" >> /etc/sysctl.d/00-alphine.conf \
-		&& echo "net.ipv4.tcp_keepalive_probes = 10" >> /etc/sysctl.d/00-alphine.conf \
-		&& echo "net.ipv4.tcp_keepalive_time = 60" >> /etc/sysctl.d/00-alphine.conf
+RUN echo "net.ipv4.tcp_keepalive_intvl = 60" >> /etc/sysctl.d/00-alpine.conf \
+		&& echo "net.ipv4.tcp_keepalive_probes = 10" >> /etc/sysctl.d/00-alpine.conf \
+		&& echo "net.ipv4.tcp_keepalive_time = 60" >> /etc/sysctl.d/00-alpine.conf
 		
 COPY server.xml /usr/local/tomcat/conf/server.xml
 COPY catalina.properties /usr/local/tomcat/conf/catalina.properties
